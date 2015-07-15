@@ -35,6 +35,7 @@ brew cask install sublime-text
 ## TODO: add sublime license key
 brew cask install intellij-idea
 ## TODO: add intellij license key
+brew cask install atom
 brew install wget
 brew install curl
 brew install git
