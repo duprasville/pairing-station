@@ -42,9 +42,11 @@ brew install git
 ## gradle & gdub
 brew install gradle
 if [[ ! -x /usr/local/bin/gw ]]; then
-  git clone https://github.com/dougborg/gdub.git ${HOME}/projects/gdub
-  cd ${HOME}/projects/gdub
-  ./install
+  ( \
+    git clone https://github.com/dougborg/gdub.git ${HOME}/projects/gdub \
+    && cd ${HOME}/projects/gdub \
+    && ./install \
+  )
 fi
 
 ## Docker things
@@ -58,4 +60,3 @@ addToBashProfile 'export NVM_DIR=~/.nvm'
 addToBashProfile 'source $(brew --prefix nvm)/nvm.sh'
 
 brew doctor
-
